@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 700 700">
+  <!-- Generator: Adobe Illustrator 29.4.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 152)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #da121a;
+      }
+
+      .st1 {
+        fill: #fff;
+      }
+
+      .st2 {
+        fill: #eb7711;
+      }
+
+      .st3 {
+        fill: #0f47af;
+      }
+
+      .st4 {
+        fill: #742c64;
+      }
+
+      .st5 {
+        fill: #078930;
+      }
+
+      .st6 {
+        fill: #fcdd09;
+      }
+    </style>
+  </defs>
+  <path class="st1" d="M0,0h700v700H0"/>
+  <path class="st4" d="M0,200v200l300,300h200M500,0h-200l400,400v-200"/>
+  <path class="st2" d="M100,0h200l400,400v200M100,500H0v200h300"/>
+  <path class="st6" d="M100,0h100v200h200v200h200v200h100v-100h-200v-200h-200V100H100M0,600h100v100H0"/>
+  <path class="st5" d="M0,100v100l500,500h100v-100h-100v-100h-100v-100h-100v-100h-100v-100h-100v-100M500,0h200v200"/>
+  <path class="st3" d="M0,200h100v200h200v200h200v100h-100v-200h-200v-200H0M500,0h100v200h100v-100h-200"/>
+  <path class="st0" d="M300,0h100v200h200v200h100v-100h-200V100h-200M0,400h100v200h200v100h-100v-200H0"/>
+</svg>
