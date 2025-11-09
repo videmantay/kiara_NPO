@@ -1,67 +1,48 @@
 {% extends "base.html"%}
 {% block content %}	
-	<div class="container mt-4" style="border-top: 1rem  solid transparent; border-image:url('{{ url_for('static', filename='img/frame.png') }}') 50 round; padding-top: 3rem;">
-		<img  src="{{ url_for('static', filename='img/textAndLogo.svg') }}" alt="Voces Sin Fronteras Logo" class="img-fluid mb-4" >
-	</div>
-	<br/>
-	<div class="container mt-4">
-		<div class="row align-items-center">
-			<div class="col-md-6">
-				<img src="{{ url_for('static', filename='img/banner_home.png') }}" width="100%" alt="Banner" class="img-fluid mb-4 rounded">
-			</div>
-			<div class="col-md-6">
-				<h1 class="display-4">Empower Through Education</h1>
-				<p class="lead">Join our global community of volunteers teaching English to students in remote countries. Make a difference, one conversation at a time.</p>
-				<a href="#" class="btn btn-primary btn-lg">Become a Volunteer</a>
-			</div>
-		</div>
+<div class="container mt-4" style="border-top: 1rem solid transparent; border-image:url('{{ url_for('static', filename='img/frame.png') }}') 50 round; padding-top: 3rem;">
+    <img src="{{ url_for('static', filename='img/textAndLogo.svg') }}" alt="Voces Sin Fronteras Logo" class="img-fluid mb-4">
+</div>
 
-		<div class="row mt-5">
-			<div class="col-md-12 text-center">
-				<h2>How It Works</h2>
-			</div>
-		</div>
+<div class="container my-5">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <img src="{{ url_for('static', filename='img/banner_home.png') }}" alt="Children in a classroom" class="img-fluid mb-4 rounded shadow">
+        </div>
+        <div class="col-md-6">
+            <h2 class="display-6">Our Mission</h2>
+            <p class="lead">At Voces sin Fronteras, we believe that language should never be a privilege; it should be a bridge.</p>
+            <p>Our mission is to bring equity and opportunity to children in Hispanic countries that have limited resources by offering free online English classes and cultural exchange experiences.</p>
+        </div>
+    </div>
 
-		<div class="row mt-4">
-			<div class="col-md-4">
-				<div class="card text-center">
-					<div class="card-body">
-						<i class="fas fa-user-plus fa-3x text-primary"></i>
-						<h5 class="card-title mt-3">Register</h5>
-						<p class="card-text">Create an account to join our community of volunteers.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="card text-center">
-					<div class="card-body">
-						<i class="fas fa-calendar-alt fa-3x text-primary"></i>
-						<h5 class="card-title mt-3">Get Assigned</h5>
-						<p class="card-text">We'll match you with a student and a lesson plan.</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="card text-center">
-					<div class="card-body">
-						<i class="fas fa-chalkboard-teacher fa-3x text-primary"></i>
-						<h5 class="card-title mt-3">Start Teaching</h5>
-						<p class="card-text">Begin your journey of making a global impact.</p>
-					</div>
-				</div>
-			</div>
-		</div>
+    <hr class="my-5">
 
-		<div class="row mt-5">
-			<div class="col-md-6">
-				<h2>About Us</h2>
-				<p>We are dedicated to providing a platform for voices without borders, connecting enthusiastic volunteers with students eager to learn English. Our mission is to foster cross-cultural understanding and provide educational opportunities to underserved communities.</p>
-			</div>
-			<div class="col-md-6">
-				<h2>Contact Us</h2>
-				<p>If you have any questions, feel free to reach out!</p>
-				<p><strong>Email:</strong> contact@vocessinfronteras.org</p>
-			</div>
-		</div>
-	</div>
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2 text-center">
+            <h2>Our Approach</h2>
+            <p>In many communities, learning English is only possible for those who can afford private lessons. We aim to change that. Through interactive Zoom lessons taught by high school volunteers, students not only learn practical English but also explore American culture in ways that make the world feel reachable and connected.</p>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-lg-8 offset-lg-2">
+            <blockquote class="blockquote text-center p-4 bg-light rounded">
+                <h3 class="mb-3">Our Goal is Simple Yet Powerful:</h3>
+                <p class="mb-0 fst-italic">To help every child believe that their voice matters, their dreams have no borders, and that language can open doors to a brighter future.</p>
+            </blockquote>
+        </div>
+    </div>
+
+    <hr class="my-5">
+
+    <div class="row text-center bg-primary-subtle p-5 rounded">
+        <div class="col">
+            <p class="lead">Together, we believe that education can break barriers, create unity, and give every voice a chance to be heard — without borders.</p>
+            <h3 class="mt-4">Get Involved</h3>
+            <p>Want to volunteer? We’d love to hear from you!</p>
+            <a href="mailto:contact@vsf.org" class="btn btn-primary btn-lg">Contact Us</a>
+        </div>
+    </div>
+</div>
 {%endblock%}
