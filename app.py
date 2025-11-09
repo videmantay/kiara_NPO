@@ -37,6 +37,33 @@ def settings():
         today_date=datetime.now().strftime("%Y"))
 
 
+@app.route('/our_story')
+def our_story():
+    return render_template('our_story.html',
+        today_date=datetime.now().strftime("%Y"))
+
+@app.route('/our_classes')
+def our_classes():
+    return render_template('our_classes.html',
+        today_date=datetime.now().strftime("%Y"))
+
+@app.route('/our_team')
+def our_team():
+    return render_template('our_team.html',
+        today_date=datetime.now().strftime("%Y"))
+
+
+@app.route('/why_english_matters')
+def why_english_matters():
+    return render_template('why_english_matters.html',
+        today_date=datetime.now().strftime("%Y"))
+
+
+@app.route('/global_understanding')
+def global_understanding():
+    return render_template('global_understanding.html',
+        today_date=datetime.now().strftime("%Y"))
+
 
 @app.route('/logout')
 def logout():

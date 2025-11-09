@@ -1,0 +1,15 @@
+{% extends "base.html"%}
+{% block content %}
+<div class="container mt-5">
+         <div class="row align-items-center">
+            <div class="col-md-6">
+            <img src="{{ url_for('static', filename='img/banner_home.png') }}" alt="Children in a classroom" class="img-fluid mb-4 rounded shadow">
+        </div>
+        <div class="col-md-6">
+            <h1 class="text-center mb-4">Our Story</h1>
+            <p class="lead">Voces Sin Fronteras (VSF) began with a simple idea: that learning English could be a doorway to connection and equality.</p>
+            <p>Our founder, Kiara ViDemantay, wanted to create a program that gave children in Latin America access to quality English education, regardless of their financial situation. What started as a small online class in Peru has now grown into a community of over 70 students and 8 dedicated volunteer teachers, all united by the same purpose: to make learning accessible and meaningful.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
