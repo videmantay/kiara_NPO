@@ -14,148 +14,137 @@
     --text-color: #2c3e50;
     --heading-color: #1a1a1a;
     --card-bg: #ffffff;
-    
-    /* Typography */
-    --font-main: 'Outfit', sans-serif;
-    --font-heading: 'Outfit', sans-serif;
-}
 
-/* Global Reset & Typography */
-body {
-    font-family: var(--font-main);
-    color: var(--text-color);
-    background-color: var(--primary-bg);
-    line-height: 1.6;
-}
+    h5,
+    h6 {
+        font-family: var(--font-heading);
+        color: var(--heading-color);
+        font-weight: 700;
+    }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
-    color: var(--heading-color);
-    font-weight: 700;
-}
+    /* Wiphala Gradient Border Utility */
+    .wiphala-border-top {
+        position: relative;
+    }
 
-/* Wiphala Gradient Border Utility */
-.wiphala-border-top {
-    position: relative;
-}
+    .wiphala-border-top::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 8px;
+        background: linear-gradient(to right,
+                var(--wiphala-white) 14.28%,
+                var(--wiphala-yellow) 14.28% 28.56%,
+                var(--wiphala-orange) 28.56% 42.84%,
+                var(--wiphala-red) 42.84% 57.12%,
+                var(--wiphala-violet) 57.12% 71.4%,
+                var(--wiphala-blue) 71.4% 85.68%,
+                var(--wiphala-green) 85.68%);
+    }
 
-.wiphala-border-top::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 8px;
-    background: linear-gradient(to right, 
-        var(--wiphala-white) 14.28%, 
-        var(--wiphala-yellow) 14.28% 28.56%, 
-        var(--wiphala-orange) 28.56% 42.84%, 
-        var(--wiphala-red) 42.84% 57.12%, 
-        var(--wiphala-violet) 57.12% 71.4%, 
-        var(--wiphala-blue) 71.4% 85.68%, 
-        var(--wiphala-green) 85.68%
-    );
-}
+    /* Wiphala Grid Pattern (CSS only) */
+    .wiphala-pattern {
+        background-image:
+            linear-gradient(45deg, var(--wiphala-red) 25%, transparent 25%),
+            linear-gradient(-45deg, var(--wiphala-orange) 25%, transparent 25%),
+            linear-gradient(45deg, transparent 75%, var(--wiphala-yellow) 75%),
+            linear-gradient(-45deg, transparent 75%, var(--wiphala-green) 75%);
+        background-size: 20px 20px;
+        background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        opacity: 0.05;
+        /* Subtle texture */
+    }
 
-/* Wiphala Grid Pattern (CSS only) */
-.wiphala-pattern {
-    background-image: 
-        linear-gradient(45deg, var(--wiphala-red) 25%, transparent 25%), 
-        linear-gradient(-45deg, var(--wiphala-orange) 25%, transparent 25%), 
-        linear-gradient(45deg, transparent 75%, var(--wiphala-yellow) 75%), 
-        linear-gradient(-45deg, transparent 75%, var(--wiphala-green) 75%);
-    background-size: 20px 20px;
-    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
-    opacity: 0.05; /* Subtle texture */
-}
+    /* Navbar Customization */
+    .navbar {
+        background-color: var(--card-bg) !important;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
 
-/* Navbar Customization */
-.navbar {
-    background-color: var(--card-bg) !important;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
+    .navbar-brand {
+        font-weight: 800;
+        font-size: 1.5rem;
+        color: var(--wiphala-blue) !important;
+        letter-spacing: -0.5px;
+    }
 
-.navbar-brand {
-    font-weight: 800;
-    font-size: 1.5rem;
-    color: var(--wiphala-blue) !important;
-    letter-spacing: -0.5px;
-}
+    .nav-link {
+        font-weight: 500;
+        color: var(--text-color) !important;
+        transition: color 0.3s ease;
+    }
 
-.nav-link {
-    font-weight: 500;
-    color: var(--text-color) !important;
-    transition: color 0.3s ease;
-}
+    .nav-link:hover {
+        color: var(--wiphala-red) !important;
+    }
 
-.nav-link:hover {
-    color: var(--wiphala-red) !important;
-}
+    /* Buttons */
+    .btn-primary {
+        background-color: var(--wiphala-blue);
+        border-color: var(--wiphala-blue);
+        font-weight: 600;
+        padding: 0.75rem 1.5rem;
+        border-radius: 50px;
+        /* Pill shape */
+        transition: all 0.3s ease;
+    }
 
-/* Buttons */
-.btn-primary {
-    background-color: var(--wiphala-blue);
-    border-color: var(--wiphala-blue);
-    font-weight: 600;
-    padding: 0.75rem 1.5rem;
-    border-radius: 50px; /* Pill shape */
-    transition: all 0.3s ease;
-}
+    .btn-primary:hover {
+        background-color: var(--wiphala-violet);
+        border-color: var(--wiphala-violet);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(134, 47, 134, 0.3);
+    }
 
-.btn-primary:hover {
-    background-color: var(--wiphala-violet);
-    border-color: var(--wiphala-violet);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(134, 47, 134, 0.3);
-}
+    /* Cards & Sections */
+    .card-custom {
+        background: var(--card-bg);
+        border: none;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
 
-/* Cards & Sections */
-.card-custom {
-    background: var(--card-bg);
-    border: none;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
+    .card-custom:hover {
+        transform: translateY(-5px);
+    }
 
-.card-custom:hover {
-    transform: translateY(-5px);
-}
+    .section-highlight {
+        background-color: var(--wiphala-white);
+        border-radius: 24px;
+        padding: 3rem;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+        position: relative;
+        overflow: hidden;
+    }
 
-.section-highlight {
-    background-color: var(--wiphala-white);
-    border-radius: 24px;
-    padding: 3rem;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.03);
-    position: relative;
-    overflow: hidden;
-}
+    /* Footer */
+    footer {
+        background-color: var(--heading-color);
+        color: white;
+        padding: 3rem 0;
+        position: relative;
+    }
 
-/* Footer */
-footer {
-    background-color: var(--heading-color);
-    color: white;
-    padding: 3rem 0;
-    position: relative;
-}
-
-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 6px;
-    background: linear-gradient(to right, 
-        var(--wiphala-green) 0% 14.28%,
-        var(--wiphala-blue) 14.28% 28.56%,
-        var(--wiphala-violet) 28.56% 42.84%,
-        var(--wiphala-red) 42.84% 57.12%,
-        var(--wiphala-orange) 57.12% 71.4%,
-        var(--wiphala-yellow) 71.4% 85.68%,
-        var(--wiphala-white) 85.68% 100%
-    );
+    footer::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: linear-gradient(to right,
+                var(--wiphala-green) 0% 14.28%,
+                var(--wiphala-blue) 14.28% 28.56%,
+                var(--wiphala-violet) 28.56% 42.84%,
+                var(--wiphala-red) 42.84% 57.12%,
+                var(--wiphala-orange) 57.12% 71.4%,
+                var(--wiphala-yellow) 71.4% 85.68%,
+                var(--wiphala-white) 85.68% 100%);
+    }
 }

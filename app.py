@@ -1,7 +1,10 @@
 import os
 import logging
 from datetime import datetime
-from flask import Flask, render_template, redirect, url_for, session
+from flask import Flask, render_template, redirect, url_for, session, request, jsonify
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
 # pylint: disable=C0103
 app = Flask(__name__)
@@ -69,6 +72,46 @@ def global_understanding():
 def logout():
     session.pop('user', None)
     return redirect('/')
+
+@app.route('/contact', methods=['POST'])
+def contact():
+    data = request.get_json()
+    name = data.get('name')
+    email = data.get('email')
+    message = data.get('message')
+    
+    # Log the message
+    print(f"New Contact Message:\nName: {name}\nEmail: {email}\nMessage: {message}")
+    
+    # Email Configuration
+    smtp_server = os.environ.get('MAIL_SERVER', 'smtp.gmail.com')
+    smtp_port = int(os.environ.get('MAIL_PORT', 587))
+    smtp_username = os.environ.get('MAIL_USERNAME')
+    smtp_password = os.environ.get('MAIL_PASSWORD')
+    recipient = os.environ.get('MAIL_RECIPIENT', smtp_username)
+
+    if smtp_username and smtp_password:
+        try:
+            msg = MIMEMultipart()
+            msg['From'] = smtp_username
+            msg['To'] = recipient
+            msg['Subject'] = f"New Contact from {name}"
+
+            body = f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}"
+            msg.attach(MIMEText(body, 'plain'))
+
+            server = smtplib.SMTP(smtp_server, smtp_port)
+            server.starttls()
+            server.login(smtp_username, smtp_password)
+            text = msg.as_string()
+            server.sendmail(smtp_username, recipient, text)
+            server.quit()
+            print("Email sent successfully.")
+        except Exception as e:
+            print(f"Failed to send email: {e}")
+            # We still return success to the user so they don't worry, but log the error
+    
+    return jsonify({"status": "success", "message": "Message received!"})
 
 if __name__ == '__main__':
     server_port = os.environ.get('PORT', '8080')
