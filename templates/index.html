@@ -1,47 +1,78 @@
 {% extends "base.html"%}
-{% block content %}	
-<div class="container mt-4" style="border-top: 1rem solid transparent; border-image:url('{{ url_for('static', filename='img/frame.png') }}') 50 round; padding-top: 3rem;">
-    <img src="{{ url_for('static', filename='img/textAndLogo.svg') }}" alt="Voces Sin Fronteras Logo" class="img-fluid mb-4">
-</div>
-
-<div class="container my-5">
-    <div class="row align-items-center">
-        <div class="col-md-6">
-            <img src="{{ url_for('static', filename='img/banner_home.png') }}" alt="Children in a classroom" class="img-fluid mb-4 rounded shadow">
+{% block content %}
+<div class="container mt-5">
+    <!-- Hero Section -->
+    <div class="row align-items-center mb-5">
+        <div class="col-lg-6 text-center text-lg-start">
+            <img src="{{ url_for('static', filename='img/textAndLogo.svg') }}" alt="Voces Sin Fronteras Logo"
+                class="img-fluid mb-4" style="max-height: 150px;">
+            <h1 class="display-4 fw-bold mb-3">Language as a Bridge</h1>
+            <p class="lead mb-4">Empowering children in Hispanic countries through free English classes and cultural
+                exchange.</p>
+            <a href="#get-involved" class="btn btn-primary btn-lg">Join Our Mission</a>
         </div>
-        <div class="col-md-6">
-            <h2 class="display-6">Our Mission</h2>
-            <p class="lead">At Voces sin Fronteras, we believe that language should never be a privilege; it should be a bridge.</p>
-            <p>Our mission is to bring equity and opportunity to children in Hispanic countries that have limited resources by offering free online English classes and cultural exchange experiences.</p>
-        </div>
-    </div>
-
-    <hr class="my-5">
-
-    <div class="row">
-        <div class="col-lg-8 offset-lg-2 text-center">
-            <h2>Our Approach</h2>
-            <p>In many communities, learning English is only possible for those who can afford private lessons. We aim to change that. Through interactive Zoom lessons taught by high school volunteers, students not only learn practical English but also explore American culture in ways that make the world feel reachable and connected.</p>
+        <div class="col-lg-6">
+            <div class="card-custom p-2">
+                <img src="{{ url_for('static', filename='img/banner_home.png') }}" alt="Children in a classroom"
+                    class="img-fluid rounded">
+            </div>
         </div>
     </div>
 
-    <div class="row mt-4">
-        <div class="col-lg-8 offset-lg-2">
-            <blockquote class="blockquote text-center p-4 bg-light rounded">
-                <h3 class="mb-3">Our Goal is Simple Yet Powerful:</h3>
-                <p class="mb-0 fst-italic">To help every child believe that their voice matters, their dreams have no borders, and that language can open doors to a brighter future.</p>
+    <!-- Mission Section with Wiphala Pattern -->
+    <div class="section-highlight wiphala-pattern my-5">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2 text-center">
+                <h2 class="mb-4">Our Mission</h2>
+                <p class="lead">At Voces sin Fronteras, we believe that language should never be a privilege; it should
+                    be a bridge.</p>
+                <p>Our mission is to bring equity and opportunity to children in Hispanic countries that have limited
+                    resources by offering free online English classes and cultural exchange experiences.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Approach Section -->
+    <div class="row my-5">
+        <div class="col-lg-6 order-lg-2">
+            <!-- Placeholder for another image or illustration if available, otherwise text acts as focus -->
+            <div class="p-4 bg-white rounded shadow-sm h-100 d-flex align-items-center justify-content-center">
+                <i class="fas fa-hands-helping fa-5x" style="color: var(--wiphala-orange);"></i>
+            </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+            <h2 class="mb-3">Our Approach</h2>
+            <p>In many communities, learning English is only possible for those who can afford private lessons. We aim
+                to change that. Through interactive Zoom lessons taught by high school volunteers, students not only
+                learn practical English but also explore American culture in ways that make the world feel reachable and
+                connected.</p>
+        </div>
+    </div>
+
+    <!-- Quote Section -->
+    <div class="row mt-5">
+        <div class="col-lg-10 offset-lg-1">
+            <blockquote class="blockquote text-center p-5 card-custom bg-white">
+                <h3 class="mb-4" style="color: var(--wiphala-violet);">Our Goal is Simple Yet Powerful</h3>
+                <p class="mb-0 fst-italic fs-4">"To help every child believe that their voice matters, their dreams have
+                    no borders, and that language can open doors to a brighter future."</p>
             </blockquote>
         </div>
     </div>
 
-    <hr class="my-5">
+    <hr class="my-5" style="border-top: 2px solid var(--wiphala-blue); opacity: 0.2;">
 
-    <div class="row text-center bg-primary-subtle p-5 rounded">
-        <div class="col">
-            <p class="lead">Together, we believe that education can break barriers, create unity, and give every voice a chance to be heard — without borders.</p>
-            <h3 class="mt-4">Get Involved</h3>
-            <p>Want to volunteer? We’d love to hear from you!</p>
-            <a href="mailto:contact@vsf.org" class="btn btn-primary btn-lg">Contact Us</a>
+    <!-- CTA Section -->
+    <div id="get-involved" class="row text-center p-5 rounded position-relative overflow-hidden"
+        style="background-color: var(--wiphala-blue); color: white;">
+        <div class="position-absolute top-0 start-0 w-100 h-100 wiphala-pattern" style="opacity: 0.1;"></div>
+        <div class="col position-relative">
+            <p class="lead fw-bold">Together, we believe that education can break barriers, create unity, and give every
+                voice a chance to be heard — without borders.</p>
+            <h3 class="mt-4 text-white">Get Involved</h3>
+            <p class="mb-4">Want to volunteer? We’d love to hear from you!</p>
+            <a href="mailto:contact@vsf.org" class="btn btn-light btn-lg"
+                style="color: var(--wiphala-blue); font-weight: bold;">Contact Us</a>
         </div>
     </div>
 </div>
