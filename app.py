@@ -62,12 +62,6 @@ def why_english_matters():
         today_date=datetime.now().strftime("%Y"))
 
 
-@app.route('/global_understanding')
-def global_understanding():
-    return render_template('global_understanding.html',
-        today_date=datetime.now().strftime("%Y"))
-
-
 @app.route('/logout')
 def logout():
     session.pop('user', None)
