@@ -1,12 +1,10 @@
-{% extends "base.html"%}
+{% extends "base.html" %}
 {% block content %}
 <div class="container mt-5">
-    <!-- Hero Section -->
     <div class="align-items-center mb-5">
-        <div class=" text-center text-lg-start">
+        <div class="text-center text-lg-start">
             <img src="{{ url_for('static', filename='img/textAndLogo.svg') }}" alt="Voces Sin Fronteras Logo"
                 class="img-fluid mb-4">
-
         </div>
         <div class="row">
             <div class="col-lg-6 card-custom p-1">
@@ -14,27 +12,16 @@
                     class="img-fluid rounded">
             </div>
             <div class="col-lg-6">
-                <!-- Mission Section with Wiphala Pattern -->
                 <div class="section-highlight my-5">
                     <div class="row">
                         <div class="col-lg-8 offset-lg-2 text-center">
                             <h2 class="mb-4">Our Mission</h2>
-                            <p class="lead">At Voces sin Fronteras, we believe that language should never be a
-                                privilege; it should
-                                be a bridge.</p>
-                            <p>Our mission is to bring equity and opportunity to children in Hispanic countries that
-                                have limited
-                                resources by offering free online English classes and cultural exchange experiences.</p>
+                            <p class="lead">At Voces sin Fronteras, we believe that language should never be a privilege; it should be a bridge.</p>
+                            <p>Our mission is to bring equity and opportunity to children in Hispanic countries that have limited resources by offering free online English classes and cultural exchange experiences.</p>
                         </div>
                         <div class="col-lg-8 offset-lg-2 text-center mt-5">
                             <h2 class="mb-3">Our Approach</h2>
-                            <p>In many communities, learning English is only possible for those who can afford private
-                                lessons. We aim
-                                to change that. Through interactive Zoom lessons taught by high school volunteers,
-                                students not only
-                                learn practical English but also explore American culture in ways that make the world
-                                feel reachable and
-                                connected.</p>
+                            <p>In many communities, learning English is only possible for those who can afford private lessons. We aim to change that. Through interactive Zoom lessons taught by high school volunteers, students not only learn practical English but also explore American culture in ways that make the world feel reachable and connected.</p>
                         </div>
                     </div>
                 </div>
@@ -42,51 +29,59 @@
         </div>
     </div>
 
-
     <hr class="my-5" style="border-top: 2px solid var(--wiphala-blue); opacity: 0.2;">
 
-    <!-- CTA Section -->
     <div id="get-involved" class="row text-center p-5 rounded position-relative overflow-hidden"
         style="background-color: var(--wiphala-blue); color: white;">
         <div class="position-absolute top-0 start-0 w-100 h-100 wiphala-pattern" style="opacity: 0.1;"></div>
         <div class="col position-relative">
-            <p class="lead fw-bold">Together, we believe that education can break barriers, create unity, and give every
-                voice a chance to be heard — without borders.</p>
-            <h3 class="mt-4 text-white">Get Involved</h3>
-            <p class="mb-4">Want to volunteer? We’d love to hear from you!</p>
+            <p class="lead fw-bold mb-4">Together, we believe that education can break barriers, create unity, and give every voice a chance to be heard — without borders.</p>
+            
+            <h3 class="text-white">Join Our Community</h3>
+            <p class="mb-4">Are you a school looking to partner, a parent with interested students, or a student ready to volunteer?</p>
+            
             <button type="button" class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#contactModal"
                 style="color: var(--wiphala-blue); font-weight: bold;">Contact Us</button>
         </div>
     </div>
 </div>
 
-<!-- Contact Modal -->
 <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header" style="background-color: var(--wiphala-blue); color: white;">
-                <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                    aria-label="Close"></button>
+                <h5 class="modal-title" id="contactModalLabel">Let's Connect</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div id="formContainer">
                     <form id="contactForm">
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" required>
+                            <input type="text" class="form-control" id="name" placeholder="Your full name" required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="email" required>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="interest" class="form-label">I am interested in...</label>
+                            <select class="form-select" id="interest" required>
+                                <option value="" selected disabled>Choose an option...</option>
+                                <option value="School Partner">Registering a school for the program</option>
+                                <option value="Student Enrollment">Enrolling a group of students</option>
+                                <option value="Volunteer">Becoming a volunteer teacher</option>
+                                <option value="General Inquiry">General Questions / Other</option>
+                            </select>
                         </div>
                         <div class="mb-3">
                             <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" rows="3" required></textarea>
+                            <textarea class="form-control" id="message" rows="3" placeholder="Tell us a bit more about how you'd like to participate!" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary w-100">Send Message</button>
                     </form>
                 </div>
+                
                 <div id="successContainer" class="text-center d-none py-4">
                     <div class="success-checkmark">
                         <div class="check-icon">
@@ -97,7 +92,7 @@
                         </div>
                     </div>
                     <h4 class="mt-4 text-success">Message Sent!</h4>
-                    <p>We'll get back to you soon.</p>
+                    <p>Thank you for reaching out. We'll be in touch soon!</p>
                 </div>
             </div>
         </div>
@@ -108,8 +103,10 @@
     document.getElementById('contactForm').addEventListener('submit', function (e) {
         e.preventDefault();
 
+        // Capture all form values
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
+        const interest = document.getElementById('interest').value; // New value
         const message = document.getElementById('message').value;
 
         fetch('/contact', {
@@ -117,185 +114,64 @@
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ name: name, email: email, message: message }),
+            // Added interest to the payload
+            body: JSON.stringify({ 
+                name: name, 
+                email: email, 
+                interest: interest, 
+                message: message 
+            }),
         })
-            .then(response => response.json())
-            .then(data => {
-                if (data.status === 'success') {
-                    // Hide form, show success
-                    document.getElementById('formContainer').classList.add('d-none');
-                    document.getElementById('successContainer').classList.remove('d-none');
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                document.getElementById('formContainer').classList.add('d-none');
+                document.getElementById('successContainer').classList.remove('d-none');
+                document.getElementById('contactForm').reset();
 
-                    // Reset form
-                    document.getElementById('contactForm').reset();
+                setTimeout(() => {
+                    var myModal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
+                    myModal.hide();
 
-                    // Close modal after delay
                     setTimeout(() => {
-                        var myModal = bootstrap.Modal.getInstance(document.getElementById('contactModal'));
-                        myModal.hide();
-
-                        // Reset modal state after it's hidden
-                        setTimeout(() => {
-                            document.getElementById('formContainer').classList.remove('d-none');
-                            document.getElementById('successContainer').classList.add('d-none');
-                        }, 500);
-                    }, 3000);
-                }
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-                alert('Something went wrong. Please try again.');
-            });
+                        document.getElementById('formContainer').classList.remove('d-none');
+                        document.getElementById('successContainer').classList.add('d-none');
+                    }, 500);
+                }, 3000);
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert('Something went wrong. Please try again.');
+        });
     });
 </script>
+
 {% block extra_css %}
 <style>
+    /* Success Checkmark CSS remains as you had it */
     .success-checkmark {
-        width: 80px;
-        height: 115px;
-        margin: 0 auto;
-
+        width: 80px; height: 115px; margin: 0 auto;
         .check-icon {
-            width: 80px;
-            height: 80px;
-            position: relative;
-            border-radius: 50%;
-            box-sizing: content-box;
-            border: 4px solid #4CAF50;
-
-            &::before {
-                top: 3px;
-                left: -2px;
-                width: 30px;
-                transform-origin: 100% 50%;
-                border-radius: 100px 0 0 100px;
+            width: 80px; height: 80px; position: relative; border-radius: 50%;
+            box-sizing: content-box; border: 4px solid #4CAF50;
+            &::before, &::after {
+                content: ''; height: 100px; position: absolute;
+                background: #FFFFFF; transform: rotate(-45deg);
             }
-
-            &::after {
-                top: 0;
-                left: 30px;
-                width: 60px;
-                transform-origin: 0 50%;
-                border-radius: 0 100px 100px 0;
-                animation: rotate-circle 4.25s ease-in;
-            }
-
-            &::before,
-            &::after {
-                content: '';
-                height: 100px;
-                position: absolute;
-                background: #FFFFFF;
-                transform: rotate(-45deg);
-            }
-
+            &::before { top: 3px; left: -2px; width: 30px; transform-origin: 100% 50%; border-radius: 100px 0 0 100px; }
+            &::after { top: 0; left: 30px; width: 60px; transform-origin: 0 50%; border-radius: 0 100px 100px 0; animation: rotate-circle 4.25s ease-in; }
             .icon-line {
-                height: 5px;
-                background-color: #4CAF50;
-                display: block;
-                border-radius: 2px;
-                position: absolute;
-                z-index: 10;
-
-                &.line-tip {
-                    top: 46px;
-                    left: 14px;
-                    width: 25px;
-                    transform: rotate(45deg);
-                    animation: icon-line-tip 0.75s;
-                }
-
-                &.line-long {
-                    top: 38px;
-                    right: 8px;
-                    width: 47px;
-                    transform: rotate(-45deg);
-                    animation: icon-line-long 0.75s;
-                }
+                height: 5px; background-color: #4CAF50; display: block; border-radius: 2px; position: absolute; z-index: 10;
+                &.line-tip { top: 46px; left: 14px; width: 25px; transform: rotate(45deg); animation: icon-line-tip 0.75s; }
+                &.line-long { top: 38px; right: 8px; width: 47px; transform: rotate(-45deg); animation: icon-line-long 0.75s; }
             }
-
-            .icon-circle {
-                top: -4px;
-                left: -4px;
-                z-index: 10;
-                width: 80px;
-                height: 80px;
-                border-radius: 50%;
-                position: absolute;
-                box-sizing: content-box;
-                border: 4px solid rgba(76, 175, 80, .5);
-            }
-
-            .icon-fix {
-                top: 8px;
-                width: 5px;
-                left: 26px;
-                z-index: 1;
-                height: 85px;
-                position: absolute;
-                transform: rotate(-45deg);
-                background-color: #FFFFFF;
-            }
+            .icon-circle { top: -4px; left: -4px; z-index: 10; width: 80px; height: 80px; border-radius: 50%; position: absolute; box-sizing: content-box; border: 4px solid rgba(76, 175, 80, .5); }
+            .icon-fix { top: 8px; width: 5px; left: 26px; z-index: 1; height: 85px; position: absolute; transform: rotate(-45deg); background-color: #FFFFFF; }
         }
     }
-
-    @keyframes icon-line-tip {
-        0% {
-            width: 0;
-            left: 1px;
-            top: 19px;
-        }
-
-        54% {
-            width: 0;
-            left: 1px;
-            top: 19px;
-        }
-
-        70% {
-            width: 50px;
-            left: -8px;
-            top: 37px;
-        }
-
-        84% {
-            width: 17px;
-            left: 21px;
-            top: 48px;
-        }
-
-        100% {
-            width: 25px;
-            left: 14px;
-            top: 46px;
-        }
-    }
-
-    @keyframes icon-line-long {
-        0% {
-            width: 0;
-            right: 46px;
-            top: 54px;
-        }
-
-        65% {
-            width: 0;
-            right: 46px;
-            top: 54px;
-        }
-
-        84% {
-            width: 55px;
-            right: 0px;
-            top: 35px;
-        }
-
-        100% {
-            width: 47px;
-            right: 8px;
-            top: 38px;
-        }
-    }
+    @keyframes icon-line-tip { 0% { width: 0; left: 1px; top: 19px; } 54% { width: 0; left: 1px; top: 19px; } 70% { width: 50px; left: -8px; top: 37px; } 84% { width: 17px; left: 21px; top: 48px; } 100% { width: 25px; left: 14px; top: 46px; } }
+    @keyframes icon-line-long { 0% { width: 0; right: 46px; top: 54px; } 65% { width: 0; right: 46px; top: 54px; } 84% { width: 55px; right: 0px; top: 35px; } 100% { width: 47px; right: 8px; top: 38px; } }
 </style>
 {% endblock %}
-{%endblock%}
+{% endblock %}
